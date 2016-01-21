@@ -74,6 +74,7 @@ print("Creating tidy data file", quote=FALSE)
 Data2 <- aggregate(. ~subject + ActivityName, Data, mean)
 Data2 <- Data2[order(Data2$subject,Data2$ActivityNumber),]
 write.table(Data2, file = "./data/tidydata.txt",sep="|",row.name=FALSE)
+View(read.table("./data/tidydata.txt", sep="|"))
 
 ## ---------------------------------------------------------------------------------
 
